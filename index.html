@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -118,6 +119,23 @@
       z-index: 999;
       animation: pulse 2s infinite;
     }
+    .ai-btn {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background: #007bff;
+      color: white;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 999;
+      animation: pulse 2s infinite;
+    }
     footer {
       background: #111;
       color: #aaa;
@@ -144,7 +162,9 @@
       <a href="#booking">Booking</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>  <section class="section" id="products">
+  </header>
+
+  <section class="section" id="products">
     <h2 data-aos="fade-up">📦 Our Products | हमारे उत्पाद</h2>
     <div class="products">
       <div class="product" data-aos="zoom-in">
@@ -172,7 +192,9 @@
         <button class="book-btn" onclick="scrollToForm()">Book Now</button>
       </div>
     </div>
-  </section>  <section class="section" id="booking">
+  </section>
+
+  <section class="section" id="booking">
     <h2 data-aos="fade-up">📝 Book Your Phone | अपना फोन बुक करें</h2>
     <form action="https://formsubmit.co/phonehubb625@gmail.com" method="POST" data-aos="fade-up">
       <input type="text" name="name" placeholder="Your Name (आपका नाम)" required>
@@ -190,31 +212,47 @@
       <input type="hidden" name="_next" value="https://phonehubmumbai.github.io/thankyou.html">
       <button type="submit">Submit Booking</button>
     </form>
-  </section>  <section class="section" id="contact">
+  </section>
+
+  <section class="section" id="contact">
     <h2 data-aos="fade-up">📍 Contact Us | संपर्क करें</h2>
     <p data-aos="fade-up" data-aos-delay="100">Shop No. B35, Lokhandwala Market, Andheri West, Mumbai</p>
     <p data-aos="fade-up" data-aos-delay="200">📞 8875661524 | 📧 phonehubb625@gmail.com</p>
-  </section>  <a class="whatsapp-btn" href="https://wa.me/918875661524" target="_blank">
+  </section>
+
+  <!-- AI Button -->
+  <a class="ai-btn" href="#ai-help" title="AI Help">
+    <i class="fas fa-robot"></i>
+  </a>
+
+  <!-- WhatsApp Button -->
+  <a class="whatsapp-btn" href="https://wa.me/918875661524" target="_blank">
     <i class="fab fa-whatsapp"></i>
-  </a>  <footer>
+  </a>
+
+  <footer>
     &copy; 2025 Phone Hub. All rights reserved.
-  </footer>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
     AOS.init({ once: true });
     function scrollToForm() {
       document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
     }
   </script>
-<!-- Chatbot script inserted below -->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/68642f8b3038d91919b885e1/1iv3ljeig';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
+
+  <!-- Chatbot script inserted below -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/68642f8b3038d91919b885e1/1iv3ljeig';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
 </body>
 </html>
