@@ -1,38 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Hub - मोबाइल्स की दुकान</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Phone Hub - Booking</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f8f8; padding: 20px; }
+    h2 { text-align: center; }
+    form { max-width: 500px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    label { display: block; margin: 10px 0 5px; }
+    input, select, textarea { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 15px; }
+    button { background-color: #28a745; color: white; padding: 10px 15px; border: none; border-radius: 8px; cursor: pointer; width: 100%; }
+    button:hover { background-color: #218838; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>📱 Phone Hub</h1>
-        <p>Andheri West, Mumbai | Call: 8875661524</p>
-        <a class="whatsapp" href="https://wa.me/918875661524" target="_blank">📲 WhatsApp Booking</a>
-    </header>
-    <main>
-        <h2>Available Mobiles | उपलब्ध मोबाइल</h2>
-        <div class="product">
-            <h3>Vivo V40 Pro</h3>
-            <p>Price: ₹42,000 | Advance: ₹4,000</p>
-        </div>
-        <div class="product">
-            <h3>iPhone 13</h3>
-            <p>Price: ₹48,000 | Advance: ₹5,000</p>
-        </div>
-        <div class="product">
-            <h3>iPhone 15</h3>
-            <p>Price: ₹68,000 | Advance: ₹6,000</p>
-        </div>
-        <div class="product">
-            <h3>Motorola Edge 60</h3>
-            <p>Price: ₹28,000 | Advance: ₹2,000</p>
-        </div>
-    </main>
-    <footer>
-        <p>© 2025 Phone Hub | phonehubb625@gmail.com</p>
-    </footer>
+
+  <section id="booking">
+    <h2>📋 Book Your Mobile / अपना मोबाइल बुक करें</h2>
+    <form id="bookingForm">
+      <label>Full Name / पूरा नाम:</label>
+      <input type="text" name="name" required>
+
+      <label>Phone Number / मोबाइल नंबर:</label>
+      <input type="tel" name="phone" required>
+
+      <label>Select Product / प्रोडक्ट चुनें:</label>
+      <select name="product">
+        <option value="Vivo V40 Pro">Vivo V40 Pro</option>
+        <option value="iPhone 13">iPhone 13</option>
+        <option value="iPhone 15">iPhone 15</option>
+        <option value="Motorola Edge 60">Motorola Edge 60</option>
+      </select>
+
+      <label>Advance Amount / एडवांस राशि:</label>
+      <input type="number" name="advance" required>
+
+      <label>Message / संदेश:</label>
+      <textarea name="message"></textarea>
+
+      <button type="submit">Submit / सबमिट करें</button>
+    </form>
+  </section>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("DGMfQnmT2-PAgrz3B"); // Public Key
+    })();
+
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_0zzeawe", "template_t46qwil", this)
+        .then(function() {
+          alert("Booking successful! धन्यवाद!");
+        }, function(error) {
+          alert("Error! कृपया बाद में प्रयास करें.");
+        });
+
+      this.reset();
+    });
+  </script>
+
 </body>
 </html>
