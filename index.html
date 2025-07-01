@@ -1,109 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phone Hub</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <header>
-        <h1>📱 Phone Hub</h1>
-        <p>Shop No. B35, Lokhandwala Market, Andheri West, Mumbai</p>
-        <p>📞 8875661524 | ✉️ phonehubb625@gmail.com</p>
-        <a class="whatsapp-button" href="https://wa.me/918875661524">📲 WhatsApp</a>
-    </header>
-
-    <section class="products">
-        <div class="product">
-            <h2>iPhone 13</h2>
-            <img src="https://via.placeholder.com/200x150?text=iPhone+13" alt="iPhone 13" />
-            <p>Price: ₹8,000</p>
-            <p>Advance: ₹2,000</p>
-        </div>
-        <div class="product">
-            <h2>iPhone 15</h2>
-            <img src="https://via.placeholder.com/200x150?text=iPhone+15" alt="iPhone 15" />
-            <p>Price: ₹16,000</p>
-            <p>Advance: ₹4,000</p>
-        </div>
-        <div class="product">
-            <h2>Motorola Edge 60</h2>
-            <img src="https://via.placeholder.com/200x150?text=Motorola+Edge+60" alt="Motorola Edge 60" />
-            <p>Price: ₹8,000</p>
-            <p>Advance: ₹2,000</p>
-        </div>
-        <div class="product">
-            <h2>Vivo V40 Pro</h2>
-            <img src="https://via.placeholder.com/200x150?text=Vivo+V40+Pro" alt="Vivo V40 Pro" />
-            <p>Price: ₹14,000</p>
-            <p>Advance: ₹4,000</p>
-        </div>
-    </section>
-    [ABOVE CODE]
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Phone Hub - Booking</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phone Hub - Mobile Booking</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f8f8f8; padding: 20px; }
-    h2 { text-align: center; }
-    form { max-width: 500px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    label { display: block; margin: 10px 0 5px; }
-    input, select, textarea { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 15px; }
-    button { background-color: #28a745; color: white; padding: 10px 15px; border: none; border-radius: 8px; cursor: pointer; width: 100%; }
-    button:hover { background-color: #218838; }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f9f9f9;
+    }
+    header {
+      background: #0d6efd;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .shop-info {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 20px;
+      flex-wrap: wrap;
+    }
+    .product-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      width: 220px;
+      text-align: center;
+    }
+    .product-card h3 {
+      margin: 10px 0 5px;
+    }
+    .product-card .price {
+      font-weight: bold;
+      color: #0d6efd;
+    }
+    .product-card .advance {
+      font-size: 14px;
+      background: #e8f0fe;
+      padding: 4px 10px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 5px;
+    }
+    form {
+      max-width: 500px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+    form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 4px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100%;
+      background: #198754;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #157347;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 50px;
+      font-size: 16px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #555;
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>📱 Phone Hub</h1>
+    <div class="shop-info">
+      Shop No. B35, Lokhandwala Market, Andheri West, Mumbai<br/>
+      📞 8875661524 | 📧 phonehubb625@gmail.com
+    </div>
+  </header>
 
-  <section id="booking">
-    <h2>📋 Book Your Mobile / अपना मोबाइल बुक करें</h2>
-    <form id="bookingForm">
-      <label>Full Name / पूरा नाम:</label>
-      <input type="text" name="name" required>
-
-      <label>Phone Number / मोबाइल नंबर:</label>
-      <input type="tel" name="phone" required>
-
-      <label>Select Product / प्रोडक्ट चुनें:</label>
-      <select name="product">
-        <option value="Vivo V40 Pro">Vivo V40 Pro</option>
-        <option value="iPhone 13">iPhone 13</option>
-        <option value="iPhone 15">iPhone 15</option>
-        <option value="Motorola Edge 60">Motorola Edge 60</option>
-      </select>
-
-      <label>Advance Amount / एडवांस राशि:</label>
-      <input type="number" name="advance" required>
-
-      <label>Message / संदेश:</label>
-      <textarea name="message"></textarea>
-
-      <button type="submit">Submit / सबमिट करें</button>
-    </form>
+  <section class="products">
+    <div class="product-card">
+      <h3>iPhone 13</h3>
+      <div class="price">₹8,000</div>
+      <div class="advance">Advance: ₹2,000</div>
+    </div>
+    <div class="product-card">
+      <h3>Vivo V40 Pro</h3>
+      <div class="price">₹14,000</div>
+      <div class="advance">Advance: ₹4,000</div>
+    </div>
+    <div class="product-card">
+      <h3>Motorola Edge 60</h3>
+      <div class="price">₹10,000</div>
+      <div class="advance">Advance: ₹3,000</div>
+    </div>
   </section>
+
+  <form id="bookingForm">
+    <h2>📋 Book Your Mobile / अपना मोबाइल बुक करें</h2>
+    <label>Full Name / पूरा नाम:</label>
+    <input type="text" name="name" required>
+    
+    <label>Phone Number / मोबाइल नंबर:</label>
+    <input type="tel" name="phone" required>
+
+    <label>Select Product / प्रोडक्ट चुनें:</label>
+    <select name="product" required>
+      <option value="iPhone 13">iPhone 13</option>
+      <option value="Vivo V40 Pro">Vivo V40 Pro</option>
+      <option value="Motorola Edge 60">Motorola Edge 60</option>
+    </select>
+
+    <label>Advance Amount / एडवांस राशि:</label>
+    <input type="number" name="advance" required>
+
+    <label>Village / गांव:</label>
+    <input type="text" name="village" required>
+
+    <label>State / राज्य:</label>
+    <input type="text" name="state" required>
+
+    <label>Pincode / पिनकोड:</label>
+    <input type="text" name="pincode" required>
+
+    <label>Message / संदेश:</label>
+    <textarea name="message"></textarea>
+
+    <button type="submit">Submit / सबमिट करें</button>
+  </form>
+
+  <a class="whatsapp-button" href="https://wa.me/918875661524" target="_blank">Chat on WhatsApp</a>
+
+  <footer>
+    &copy; 2025 Phone Hub, Mumbai. All rights reserved.
+  </footer>
 
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
-    (function() {
-      emailjs.init("DGMfQnmT2-PAgrz3B"); // Public Key
+    (function(){
+      emailjs.init("DGMfQnmT2-PAgrz3B"); // Public key
     })();
 
-    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    document.getElementById("bookingForm").addEventListener("submit", function(e){
       e.preventDefault();
-
       emailjs.sendForm("service_0zzeawe", "template_t46qwil", this)
-        .then(function() {
-          alert("Booking successful! धन्यवाद!");
-        }, function(error) {
-          alert("Error! कृपया बाद में प्रयास करें.");
-        });
-
+        .then(() => alert("Booking successful! धन्यवाद!"))
+        .catch(() => alert("Error! कृपया बाद में प्रयास करें."));
       this.reset();
     });
   </script>
-
 </body>
 </html>
